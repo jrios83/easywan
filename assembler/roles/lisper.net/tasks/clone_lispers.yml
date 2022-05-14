@@ -1,0 +1,7 @@
+---
+    - name: Clone lispers.net repository
+      git:
+        repo: https://github.com/farinacci/lispers.net.git
+        dest: /home/ubuntu/lispers.net-master
+        clone: yes
+        update: yes

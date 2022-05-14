@@ -1,0 +1,21 @@
+---
+    - name: Create clone folder for lispers
+      ansible.builtin.file:
+        path: /home/ubuntu/lispers.net-master
+        state: directory
+        mode: '0755'
+        owner: root
+
+    - name: Create clone folder for lisp config
+      ansible.builtin.file:
+        path: /home/ubuntu/lisp-config
+        state: directory
+        mode: '0755'
+        owner: root
+
+    - name: Create clone folder for sdwan private repo
+      ansible.builtin.file:
+        path: /home/ubuntu/sdwan
+        state: directory
+        mode: '0755'
+        owner: root

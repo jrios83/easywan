@@ -1,0 +1,19 @@
+---
+- hosts: "{{ HOSTS }}"
+  become: true
+  become_user: root
+  vars_files: checkout_vars.yml
+  tasks:
+    - name: restart lispers.net
+      community.docker.docker_container_exec:
+        container: "{{ ROLE_LISP }}"
+        argv:
+          - /bin/tcsh
+          - "-c"
+          - "./RL"
+        chdir: /lispers.net
+      register: result
+
+    - name: Print stderr lines
+      debug:
+        var: result.stdout

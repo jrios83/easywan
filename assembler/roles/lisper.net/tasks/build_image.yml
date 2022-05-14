@@ -1,0 +1,7 @@
+---
+    - name: Build container image
+      community.docker.docker_image:
+        name: lispers.net/ubuntu
+        build:
+          path: /home/ubuntu/lispers.net-master/build
+        source: build

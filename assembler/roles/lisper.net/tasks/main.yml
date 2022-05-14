@@ -1,0 +1,8 @@
+---
+# tasks file for roles/lisper.net
+- import_tasks: create_folders.yml
+- import_tasks: install_docker.yml
+- import_tasks: clone_lispers.yml
+- import_tasks: build_image.yml
+- import_tasks: run_container.yml
+- import_tasks: copy_config.yml

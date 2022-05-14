@@ -1,0 +1,25 @@
+---
+# handlers file for roles/lisper.net
+- name: copy config lispers.net
+  community.docker.docker_container_exec:
+    container: "{{ ROLE_LISP }}"
+    argv:
+      - /bin/tcsh
+      - "-c"
+      - "cp -rf /lisp-config/lisp.config /lispers.net"
+      - "cp -rf /lisp-config/RL /lispers.net"
+    chdir: /lispers.net
+
+- name: restart lispers.net
+  community.docker.docker_container_exec:
+    container: "{{ ROLE_LISP }}"
+    argv:
+      - /bin/tcsh
+      - "-c"
+      - "./RL"
+    chdir: /lispers.net
+  register: result
+
+- name: Print stderr lines
+  debug:
+    var: result.stdout

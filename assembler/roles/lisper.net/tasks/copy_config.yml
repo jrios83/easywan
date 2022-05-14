@@ -1,0 +1,8 @@
+---
+- name: Copy lisp.config
+  copy: src=./{{ CONFIG_PATH }}/lisp.config dest=/home/ubuntu/lisp-config
+- name: Copy RL file
+  copy: src=./{{ CONFIG_PATH }}/RL dest=/home/ubuntu/lisp-config
+  notify:
+  - copy config lispers.net
+  - restart lispers.net

@@ -1,0 +1,35 @@
+---
+# vars file for roles/CloningPrivateRepo
+# Name of the SSH key (e.g. git_ssh_key)
+KEY_TITLE: git_ssh_key
+
+# Location of the SSH key to be (e.g. ~/.ssh/id_rsa_git)
+KEY_PATH: /home/ubuntu/.ssh/id_rsa
+
+# # GitHub personal access token
+GITHUB_ACCESS_TOKEN: !vault |
+          $ANSIBLE_VAULT;1.1;AES256
+          32393935396334383966326435613765616561656535623339333462633665353364323264353265
+          3837353638353232383961633032616137316266636137630a393631386432383233666337333434
+          36663162666535316339313138303937643832623235643832613635623565323038616166656537
+          3363363938663435610a396138656330326262386166353634333033636439666136663364616566
+          35343731343038663932383831663136636437616637633962653462373763333034396365383339
+          3530663861333037333561633561306534616430363461633435
+
+# Git repository to be cloned. Must be SSH (not https)
+GIT_REPO: git@github.com:jrios83/deployinfra.git
+
+# Branch of the git repository (e.g. master)
+GIT_BRANCH: main
+
+# Directory where the repository will be cloned (e.g. /home/user/repo_name)
+CLONE_DEST: /home/ubuntu/sdwan
+
+# Location of the SSH known hosts file (e.g. ~/.ssh/known_hosts)
+KNOWN_HOSTS_PATH: ~/.ssh/known_hosts
+
+# Location of the git binary (e.g. /usr/bin/git)
+GIT_EXECUTABLE: /usr/bin/git
+
+# Github FQDN
+GIT_SERVER_FQDN: github.com

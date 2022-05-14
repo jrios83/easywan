@@ -1,0 +1,12 @@
+---
+- hosts: "{{ HOSTS }}"
+  become: true
+  become_user: root
+  vars_files: checkout_vars.yml
+  tasks:
+    - name: Git checkout
+      ansible.builtin.git:
+        repo: "{{ REPO }}"
+        dest: /home/ubuntu/sdwan
+        key_file: /home/ubuntu/.ssh/id_rsa
+        update: yes

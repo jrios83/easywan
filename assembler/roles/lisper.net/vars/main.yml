@@ -1,0 +1,5 @@
+---
+# vars file for roles/lisper.net
+ROLE_LISP: xtr
+NETWORK_MODE: bridge
+CONFIG_PATH: files

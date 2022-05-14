@@ -1,0 +1,17 @@
+---
+- hosts: "{{ HOSTS }}"
+  become: true
+  become_user: root
+  vars_files: checkout_vars.yml
+  tasks:
+    - name: Copy lisp.config
+      copy: src={{ REPO_PATH }}/RL dest=/home/ubuntu/lisp-config
+
+    - name: copy config lispers.net
+      community.docker.docker_container_exec:
+        container: "{{ ROLE_LISP }}"
+        argv:
+          - /bin/tcsh
+          - "-c"
+          - "cp -rf /lisp-config/RL /lispers.net"
+        chdir: /lispers.net

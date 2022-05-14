@@ -1,0 +1,11 @@
+- name: Run container msmr
+  community.docker.docker_container:
+    name: "{{ ROLE_LISP }}"
+    network_mode: "{{ NETWORK_MODE }}"
+    privileged: true
+    image: lispers.net/ubuntu
+    hostname: "{{ ROLE_LISP }}"
+    interactive: yes
+    tty: yes
+    volumes:
+      - "/home/ubuntu/lisp-config:/lisp-config"
