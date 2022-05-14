@@ -1,0 +1,4 @@
+HOSTS: tag_Service_msmr
+REPO: git@github.com:jrios83/deployinfra.git
+REPO_PATH: /home/ubuntu/sdwan/ConfigFiles/xtr-config
+ROLE_LISP: msmr

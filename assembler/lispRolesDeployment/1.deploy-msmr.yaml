@@ -5,3 +5,4 @@
   vars_files: checkout_vars.yml
   roles:
     - lisper.net
+    - CloningPrivateRepo
