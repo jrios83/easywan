@@ -1,4 +1,4 @@
-- name: Run container msmr
+- name: Run container
   community.docker.docker_container:
     name: "{{ ROLE_LISP }}"
     network_mode: "{{ NETWORK_MODE }}"

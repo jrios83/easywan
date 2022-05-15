@@ -1,5 +1,5 @@
 ---
 # vars file for roles/lisper.net
 ROLE_LISP: msmr
-NETWORK_MODE: bridge
+NETWORK_MODE: host
 CONFIG_PATH: files
