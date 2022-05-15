@@ -1,4 +1,4 @@
 HOSTS: tag_Service_msmr
-REPO: git@github.com:jrios83/deployinfra.git
-REPO_PATH: /home/ubuntu/sdwan/ConfigFiles/xtr-config
+REPO: git@github.com:jrios83/easywan.git
+REPO_PATH: /home/ubuntu/easywan/manageLispers.net/configFiles/msmr-config
 ROLE_LISP: msmr

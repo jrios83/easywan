@@ -7,6 +7,6 @@
     - name: Git checkout
       ansible.builtin.git:
         repo: "{{ REPO }}"
-        dest: /home/ubuntu/sdwan
+        dest: /home/ubuntu/easywan
         key_file: /home/ubuntu/.ssh/id_rsa
         update: yes

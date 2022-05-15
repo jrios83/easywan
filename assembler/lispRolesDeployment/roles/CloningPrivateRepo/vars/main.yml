@@ -17,13 +17,13 @@ GITHUB_ACCESS_TOKEN: !vault |
           3530663861333037333561633561306534616430363461633435
 
 # Git repository to be cloned. Must be SSH (not https)
-GIT_REPO: git@github.com:jrios83/deployinfra.git
+GIT_REPO: git@github.com:jrios83/easywan.git
 
 # Branch of the git repository (e.g. master)
 GIT_BRANCH: main
 
 # Directory where the repository will be cloned (e.g. /home/user/repo_name)
-CLONE_DEST: /home/ubuntu/sdwan
+CLONE_DEST: /home/ubuntu/easywan
 
 # Location of the SSH known hosts file (e.g. ~/.ssh/known_hosts)
 KNOWN_HOSTS_PATH: ~/.ssh/known_hosts
