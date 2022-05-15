@@ -1,5 +1,5 @@
-infra-aws/*.terraform*
-infra-aws/*.tfstate*
-infra-aws/backend/*.terraform*
-infra-aws/backend/*.tfstate*
+infra-cloud/aws/*.terraform*
+infra-cloud/aws/*.tfstate*
+infra-cloud/aws/backend/aws/*.terraform*
+infra-cloud/aws/backend/aws/*.tfstate*
 assembler/.easywan/
