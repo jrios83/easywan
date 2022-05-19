@@ -96,6 +96,10 @@ output "ec2_public_dns" {
   value = ["${aws_instance.msmr-example.*.public_dns}"]
 }
 
+/*output "foo" {
+  value = { for tuple in regexall("(.*)=(.*)", file("./.env")) : tuple[0] => tuple[1] }
+}*/
+
 /*resource "aws_route53_zone" "primary" {
   name = "orsisperu.com"
 }
